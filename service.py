@@ -7,15 +7,16 @@ from pydantic import BaseModel
 
 
 class Features(BaseModel):
-    bhk: int
-    size: int
-    floor: str
-    area_type: str
-    city: str
-    furnishing_status: str
-    tenant_preferred: str
-    bathroom: int
-    point_of_contact: str
+    datetime: str
+    season: int
+    holiday: int
+    workingday: int
+    weather: int
+    temp: float
+    atemp: float
+    humidity: int
+    windspeed: float
+    count: int
 
 
 bento_model = bentoml.sklearn.get("bike_sharing:latest")
